@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Computer Science Careers</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .dropdown {
+      margin: 2rem 0;
+    }
+
+    select {
+      padding: 0.6rem 1rem;
+      font-size: 1rem;
+      border: 2px solid #7c2529;
+      border-radius: 5px;
+      background-color: #ffffff;
+      color: #333333;
+      cursor: pointer;
+      transition: border-color 0.3s ease;
+    }
+
+    select:hover {
+      border-color: #a53035;
+    }
+
+    .career-info {
+      margin-top: 1.5rem;
+      font-size: 1.05rem;
+      color: #444444;
+      text-align: left;
+      line-height: 1.8;
+      padding: 1.2rem;
+      border-left: 4px solid #7c2529;
+      background: #f9f9f9;
+      border-radius: 5px;
+    }
+
+    .career-text strong {
+      color: #7c2529;
+    }
+
+    .salary-badge {
+      display: inline-block;
+      margin-top: 0.8rem;
+      background-color: #7c2529;
+      color: #ffffff;
+      font-weight: bold;
+      padding: 0.4rem 0.9rem;
+      border-radius: 25px;
+      font-size: 0.95rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+
+    .icon {
+      font-size: 2rem;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Explore Careers in Computer Science</h1>
+  </header>
+
+  <main>
+    <div class="intro">
+      <p>Select a career below to learn more about what it involves.</p>
+
+      <!-- Dropdown -->
+      <div class="dropdown">
+        <label for="career-select">Choose a career:</label><br>
+        <select id="career-select">
+          <option value="">-- Select a career --</option>
+          <option value="software">Software Developer</option>
+          <option value="web">Web Developer</option>
+          <option value="data">Data Scientist</option>
+          <option value="ml">Machine Learning Engineer</option>
+          <option value="cyber">Cybersecurity Specialist</option>
+          <option value="cloud">Cloud Engineer</option>
+          <option value="game">Game Developer</option>
+        </select>
+      </div>
+
+      <!-- Info Box -->
+      <div class="career-info" id="career-info">
+        Pick a career to see details.
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const careerDetails = {
+      software: {
+        icon: "💻",
+        text: `
+          <strong>Responsibilities:</strong> Design, code, test, and maintain applications across desktop, web, or enterprise platforms. Collaborate with teams to solve complex business problems.<br>
+          <strong>Skills:</strong> Problem-solving, debugging, teamwork, logical thinking.<br>
+          <strong>Tools:</strong> Java, Python, C++, Git, IDEs (VS Code, IntelliJ).<br>
+        `,
+        salary: "$70,000 - $80,000"
+      },
+      web: {
+        icon: "🌐",
+        text: `
+          <strong>Responsibilities:</strong> Build and maintain websites and web apps, ensuring functionality, responsiveness, and user-friendly design.<br>
+          <strong>Skills:</strong> Creativity, design, coding, communication.<br>
+          <strong>Tools:</strong> HTML, CSS, JavaScript, React, Node.js, Figma.<br>
+        `,
+        salary: "$60,000 - $75,000"
+      },
+      data: {
+        icon: "📊",
+        text: `
+          <strong>Responsibilities:</strong> Analyze large datasets, extract insights, build predictive models, and communicate findings to decision-makers.<br>
+          <strong>Skills:</strong> Analytical thinking, statistics, communication, storytelling with data.<br>
+          <strong>Tools:</strong> Python, R, SQL, Tableau, Pandas, Matplotlib.<br>
+        `,
+        salary: "$85,000 - $95,000"
+      },
+      ml: {
+        icon: "🤖",
+        text: `
+          <strong>Responsibilities:</strong> Create and deploy AI models that solve tasks like speech recognition, image classification, or recommendation systems.<br>
+          <strong>Skills:</strong> Math, statistics, problem-solving, data analysis.<br>
+          <strong>Tools:</strong> TensorFlow, PyTorch, Python, Scikit-learn, cloud ML platforms.<br>
+        `,
+        salary: "$95,000 - $110,000"
+      },
+      cyber: {
+        icon: "🔐",
+        text: `
+          <strong>Responsibilities:</strong> Protect systems from cyberattacks, run security audits, monitor for breaches, and develop defense strategies.<br>
+          <strong>Skills:</strong> Attention to detail, critical thinking, ethics, risk assessment.<br>
+          <strong>Tools:</strong> Firewalls, intrusion detection systems, encryption, Kali Linux, Wireshark.<br>
+        `,
+        salary: "$65,000 - $80,000"
+      },
+      cloud: {
+        icon: "☁️",
+        text: `
+          <strong>Responsibilities:</strong> Design and manage scalable cloud infrastructure for applications, ensuring performance, security, and cost efficiency.<br>
+          <strong>Skills:</strong> Systems thinking, automation, collaboration, troubleshooting.<br>
+          <strong>Tools:</strong> AWS, Azure, Google Cloud, Docker, Kubernetes, Terraform.<br>
+        `,
+        salary: "$80,000 - $95,000"
+      },
+      game: {
+        icon: "🎮",
+        text: `
+          <strong>Responsibilities:</strong> Develop and design video games, focusing on gameplay mechanics, visuals, physics, and user experience.<br>
+          <strong>Skills:</strong> Creativity, storytelling, coding, problem-solving, collaboration.<br>
+          <strong>Tools:</strong> Unity, Unreal Engine, C#, C++, Blender, Photoshop.<br>
+        `,
+        salary: "$55,000 - $70,000"
+      }
+    };
+
+    const select = document.getElementById("career-select");
+    const infoBox = document.getElementById("career-info");
+
+    select.addEventListener("change", () => {
+      const value = select.value;
+      if (careerDetails[value]) {
+        infoBox.innerHTML = `
+          <div class="icon">${careerDetails[value].icon}</div>
+          <div class="career-text">
+            ${careerDetails[value].text}
+            <div class="salary-badge">Starting Salary: ${careerDetails[value].salary}</div>
+          </div>
+        `;
+      } else {
+        infoBox.textContent = "Pick a career to see details.";
+      }
+    });
+  </script>
+</body>
+</html>
