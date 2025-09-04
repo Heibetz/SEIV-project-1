@@ -112,3 +112,27 @@ select:hover {
     font-size: 1.1rem;
     color: #444444;
 }
+
+.menu {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.menu button {
+  background-color: #7c2529;
+  color: #ffffff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.menu button:hover {
+  background-color: #a53035;
+  transform: translateY(-2px);
+}
+}
