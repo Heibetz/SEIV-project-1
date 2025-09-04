@@ -86,4 +86,29 @@ main {
 
 .next-button:hover {
   background-color: #a53035;
+
+/* Extra dropdown styling */
+.dropdown {
+    margin: 1rem 0;
+}
+
+select {
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+    border: 2px solid #7c2529;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #333333;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+select:hover {
+    border-color: #a53035;
+}
+
+.career-info {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    color: #444444;
 }
