@@ -3,12 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Welcome to Oklahoma Christian</title>
+  <title>Welcome to OC</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Navigation menu styles */
+    .menu {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .menu a {
+      text-decoration: none;
+    }
+
+    .menu button {
+      background-color: #7c2529;
+      color: #ffffff;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .menu button:hover {
+      background-color: #a53035;
+      transform: translateY(-2px);
+    }
+
+    .intro {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      line-height: 1.6;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>Welcome to Oklahoma Christian University</h1>
+    <h1>Welcome to OC</h1>
+    <!-- Navigation buttons at the top -->
+    <nav class="menu">
+      <a href="main-page.html"><button>Home</button></a>
+      <a href="more-cs-page.html"><button>More CS</button></a>
+      <a href="careers-page.html"><button>Careers</button></a>
+      <a href="major-prep-page.html"><button>Prep</button></a>
+    </nav>
   </header>
 
   <main>
@@ -20,9 +63,5 @@
       </p>
     </section>
   </main>
-
-  <button class="next-button" onclick="location.href='more-cs-page.html'">
-    Next →
-  </button>
 </body>
 </html>
