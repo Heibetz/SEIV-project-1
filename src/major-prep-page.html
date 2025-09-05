@@ -3,20 +3,127 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Major Preparation</title>
-	<link rel="stylesheet" href="styles.css">
+	<title>How to Prepare to be a CS Major</title>
+
+	<style>
+	/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+  color: #333333;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+header {
+  background-color: #7c2529; /* Crimson */
+  color: #ffffff;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+}
+
+/* Intro Section */
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.intro {
+  max-width: 800px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+/* Next Button */
+.next-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #7c2529;
+  color: #ffffff;
+  border: none;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.next-button:hover {
+  background-color: #a53035;
+}
+</style>
+
 </head>
 <body>
 	<header>
 		<h1>How to Prepare to be a CS Major</h1>
 	</header>
 	<main>
-		<p>
-            To prepare for a major in Computer Science, students should focus on developing strong problem-solving skills, gaining proficiency in programming languages, and understanding fundamental computer science concepts. It's also beneficial to engage in hands-on projects, internships, and collaborative learning experiences.
-        </p>
+		<div class="intro">
+      <!-- Temporary nav placeholder -->
+      <p style="font-size: 0.95rem; color:#666; margin-bottom: 1rem;">
+        Navigation links will go here (coming soon).
+      </p>
+
+      <!-- Intro text -->
+			<p style="margin-bottom: 1.25rem;">
+        To prepare for a major in Computer Science, focus on problem-solving, programming practice, and math fundamentals. Consistency matters more than perfection.
+			</p>
+
+      <!-- Sections -->
+      <section style="text-align: left; margin-top: 1rem;">
+        <h2 style="color:#7c2529; margin-bottom: .4rem;">Core Skills</h2>
+        <ul style="margin-left: 1.25rem; margin-bottom: 1rem;">
+          <li>Programming basics: variables, conditionals, loops, functions</li>
+          <li>Debugging: read errors, print/log, use a debugger</li>
+          <li>Discrete math: logic, sets, functions, basic proofs</li>
+          <li>Git basics: add → commit → push; write a clear README</li>
+        </ul>
+
+        <h2 style="color:#7c2529; margin: .75rem 0 .4rem;">Starter Courses / Topics</h2>
+        <ul style="margin-left: 1.25rem; margin-bottom: 1rem;">
+          <li>Intro to Programming (Python or Java)</li>
+          <li>Data Structures (lists, stacks, queues, maps)</li>
+          <li>Discrete Mathematics</li>
+          <li>Optional: Web basics (HTML/CSS/JavaScript) or Databases (SQL)</li>
+        </ul>
+
+        <h2 style="color:#7c2529; margin: .75rem 0 .4rem;">Simple Weekly Actions</h2>
+        <ul style="margin-left: 1.25rem;">
+          <li>Build or improve a tiny project (1–2 hours)</li>
+          <li>Push code to GitHub once per week</li>
+          <li>Do 5–10 practice problems (HackerRank/LeetCode easy)</li>
+          <li>Attend office hours / tutoring or a CS club meetup</li>
+        </ul>
+      </section>
+		</div>
 	</main>
+
 	<footer>
 		<p>Oklahoma Christian University</p>
 	</footer>
+	  <!-- Next button just shows placeholder for now -->
+  <button class="next-button" onclick="alert('Next page coming soon!')">Next</button>
+
 </body>
 </html>
