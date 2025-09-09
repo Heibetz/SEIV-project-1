@@ -60,6 +60,9 @@ main {
   box-shadow: 0 4px 6px rgba(0,0,0,0.2);
 }
 
+.next-button:hover {
+  background-color: #a53035;
+=======
 /* Button container for nav buttons */
 .button-container {
   position: fixed;
