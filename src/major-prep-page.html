@@ -7,6 +7,39 @@
 
 	<style>
 	/* General Reset */
+.menu {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .menu a {
+    text-decoration: none;
+  }
+
+  .menu button {
+    background-color: #7c2529;
+    color: #ffffff;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+
+  .menu button:hover {
+    background-color: #a53035;
+    transform: translateY(-2px);
+  }
+
+  .intro {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    line-height: 1.6;
+  }
 * {
   margin: 0;
   padding: 0;
@@ -77,16 +110,20 @@ main {
 <body>
 	<header>
 		<h1>How to Prepare to be a CS Major</h1>
+      <!-- Navigation buttons at the top -->
+      <nav class="menu">
+        <a href="main-page.html"><button>Home</button></a>
+        <a href="more-cs-page.html"><button>More CS</button></a>
+        <a href="careers-page.html"><button>Careers</button></a>
+        <a href="major-prep-page.html"><button>Prep</button></a>
+        <a href="day-in-the-life/john-skeweres.html"><button>Day in Life</button></a>
+
+      </nav>
 	</header>
 	<main>
 		<div class="intro">
-      <!-- Temporary nav placeholder -->
-      <p style="font-size: 0.95rem; color:#666; margin-bottom: 1rem;">
-        Navigation links will go here (coming soon).
-      </p>
-
       <!-- Intro text -->
-			<p style="margin-bottom: 1.25rem;">
+			<p>
         To prepare for a major in Computer Science, focus on problem-solving, programming practice, and math fundamentals. Consistency matters more than perfection.
 			</p>
 
@@ -118,12 +155,5 @@ main {
       </section>
 		</div>
 	</main>
-
-	<footer>
-		<p>Oklahoma Christian University</p>
-	</footer>
-	  <!-- Next button just shows placeholder for now -->
-  <button class="next-button" onclick="alert('Next page coming soon!')">Next</button>
-
 </body>
 </html>
