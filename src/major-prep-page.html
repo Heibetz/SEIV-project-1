@@ -5,14 +5,106 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>How to Prepare to be a CS Major</title>
 
-  <style>
-    /* Menu styles */
-    .menu {
+	<style>
+	/* General Reset */
+  .menu {
       margin-top: 1rem;
       display: flex;
       justify-content: center;
       gap: 1rem;
     }
+
+  .menu a {
+    text-decoration: none;
+  }
+
+  .menu button {
+    background-color: #7c2529;
+    color: #ffffff;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+
+  .menu button:hover {
+    background-color: #a53035;
+    transform: translateY(-2px);
+  }
+
+  .intro {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    line-height: 1.6;
+  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+  color: #333333;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+header {
+  background-color: #7c2529; /* Crimson */
+  color: #ffffff;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+}
+
+/* Intro Section */
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.intro {
+  max-width: 800px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+/* Next Button */
+.next-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #7c2529;
+  color: #ffffff;
+  border: none;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.next-button:hover {
+  background-color: #a53035;
+}
+</style>
 
     .menu a { text-decoration: none; }
 
@@ -111,12 +203,15 @@
 <body>
 	<header>
 		<h1>How to Prepare to be a CS Major</h1>
-    <nav class="menu">
-      <a href="main-page.html"><button>Home</button></a>
-      <a href="more-cs-page.html"><button>More CS</button></a>
-      <a href="careers-page.html"><button>Careers</button></a>
-      <a href="major-prep-page.html" aria-current="page"><button>Prep</button></a>
-    </nav>
+      <!-- Navigation buttons at the top -->
+      <nav class="menu">
+        <a href="main-page.html"><button>Home</button></a>
+        <a href="more-cs-page.html"><button>More CS</button></a>
+        <a href="careers-page.html"><button>Careers</button></a>
+        <a href="major-prep-page.html"><button>Prep</button></a>
+        <a href="day-in-the-life/john-skeweres.html"><button>Day in Life</button></a>
+
+      </nav>
 	</header>
 
 	<main>
@@ -192,9 +287,5 @@
       </details>
 		</div>
 	</main>
-
-	<footer>
-		<p>Oklahoma Christian University</p>
-	</footer>
 </body>
 </html>

@@ -3,12 +3,65 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Computer Science at OC</title>
+  <title>More CS</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Menu styles */
+    .menu {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;  
+    }
+
+    .menu a {
+      text-decoration: none;
+    }
+
+    .menu button {
+      background-color: #7c2529;
+      color: #ffffff;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .menu button:hover {
+      background-color: #a53035;
+      transform: translateY(-2px);
+    }
+
+    .intro {
+      max-width: 800px;
+      margin: 2rem auto;
+      line-height: 1.6;
+      padding: 0 1rem;
+    }
+
+    .cs-link {
+      color: #7c2529;
+      text-decoration: underline;
+    }
+
+    .cs-link:hover {
+      color: #a53035;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>Computer Science at Oklahoma Christian</h1>
+    <h1>More CS</h1>
+    <nav class="menu">
+      <a href="main-page.html"><button>Home</button></a>
+      <a href="more-cs-page.html"><button>More CS</button></a>
+      <a href="careers-page.html"><button>Careers</button></a>
+      <a href="major-prep-page.html"><button>Prep</button></a>
+      <a href="day-in-the-life/john-skeweres.html"><button>Day in Life</button></a>
+
+    </nav>
   </header>
 
   <main>
@@ -36,15 +89,5 @@
       </p>
     </section>
   </main>
-
-  <!-- Button container -->
-  <div class="button-container">
-    <button class="nav-button left" onclick="location.href='backpage.html'">
-      ← Back
-    </button>
-    <button class="nav-button right" onclick="location.href='main-page.html'">
-      Restart →
-    </button>
-  </div>
 </body>
 </html>
