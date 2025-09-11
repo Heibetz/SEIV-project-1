@@ -62,4 +62,56 @@ main {
 
 .next-button:hover {
   background-color: #a53035;
+=======
+/* Button container for nav buttons */
+.button-container {
+  position: fixed;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.nav-button {
+  background-color: #7c2529;
+  color: #ffffff;
+  border: none;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.next-button:hover {
+  background-color: #a53035;
+
+/* Extra dropdown styling */
+.dropdown {
+    margin: 1rem 0;
+}
+
+select {
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+    border: 2px solid #7c2529;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #333333;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+select:hover {
+    border-color: #a53035;
+}
+
+.career-info {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    color: #444444;
 }
